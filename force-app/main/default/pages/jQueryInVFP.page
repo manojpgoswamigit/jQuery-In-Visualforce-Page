@@ -1,0 +1,11 @@
+<apex:page >
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" />
+    <!-- j$ will be used instead of $ to use jQuery. No conflict is needed to avoid conflicts b/w salesforce and jQuery to use the '$' symbol. -->
+    <script> j$ = jQuery.noConflict(); </script> 
+    <script>
+        function doSomething(){
+    		alert('doSomething() called.');
+    	}
+        j$(function() { doSomething(); });
+    </script>
+</apex:page>
